@@ -48,7 +48,7 @@ int main(){
           if(a.empty())a.push(k[i]);
           else{
             if(check(k[i],a)){
-                while(!a.empty()){
+                while(!a.empty()&&a.top()!='('){
                    ans+=a.top();
                    a.pop();
                 }
