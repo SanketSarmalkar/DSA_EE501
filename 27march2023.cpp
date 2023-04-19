@@ -32,6 +32,15 @@ void InsertInBetween(list<int> &List){
 
 }
 
+void DeleteUsingIterator(list<int> &List){
+    list<int>::iterator iterate = List.begin();
+    int n, data;
+    cout<<"Index at which the node is to be deleted: ";
+    cin>>n;
+    advance(iterate, n);
+    List.erase(iterate);
+}
+
 int main(){
     list<int> List;
     cout<<"Enter the number of nodes: ";
@@ -49,6 +58,7 @@ int main(){
     PrintList(List);
     InsertInBetween(List);
     PrintList(List);
-    
+    DeleteUsingIterator(List);
+    PrintList(List);
 
 }
